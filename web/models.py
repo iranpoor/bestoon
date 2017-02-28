@@ -13,14 +13,12 @@ class Token(models.Model):
 
 # Create your models here.
 class Expense(models.Model):
-    print('expense')
     text = models.CharField(max_length=255)
     date = models.DateTimeField()
     amount = models.BigIntegerField()
     user = models.ForeignKey(User)
 
     def __str__(self):
-        print('unicode')
         return "{}-{}".format(self.date, self.amount)
 
 
