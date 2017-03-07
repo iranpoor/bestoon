@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Token(models.Model):
     User = models.OneToOneField(User, on_delete=models.CASCADE)
-    Token = models.CharField(max_length=48)
+    token = models.CharField(max_length=48)
 
     def __str__(self):
         return "{}_Token".format(self.User)
